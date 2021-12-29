@@ -14,7 +14,7 @@ func Handler(request events.APIGatewayProxyRequest) (events.APIGatewayProxyRespo
 	// stdout and stderr are sent to AWS CloudWatch Logs
 	log.Printf("Processing Lambda request %t\n", request.RequestContext)
 	return events.APIGatewayProxyResponse{
-		Body:       "Hello world",
+		Body:       "{\"msg\":\"Hello world\"}",
 		StatusCode: 200,
 	}, nil
 }

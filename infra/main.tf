@@ -1,5 +1,5 @@
 provider "aws" {
-  region = "ap-southeast-1"
+  region = "us-east-1"
 }
 
 variable "app_name" {
@@ -28,4 +28,14 @@ resource "random_id" "unique_suffix" {
 
 output "api_url" {
   value = aws_api_gateway_deployment.api_deployment.invoke_url
+}
+
+terraform {
+  cloud {
+    organization = "lugon"
+
+    workspaces {
+      name = "lugondev-space"
+    }
+  }
 }

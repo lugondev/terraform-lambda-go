@@ -1,5 +1,6 @@
 # Local .terraform directories
 **/.terraform/*
+infra/.terraform.lock.hcl
 
 # .tfstate files
 *.tfstate
@@ -20,10 +21,12 @@ override.tf
 override.tf.json
 *_override.tf
 *_override.tf.json
-build/bin/*
+**/build/bin/*
 # Include override files you do wish to add to version control using negated pattern
 #
 # !example_override.tf
 
 # Include tfplan files to ignore the plan output of command: terraform plan -out=tfplan
 # example: *tfplan*
+
+.idea
